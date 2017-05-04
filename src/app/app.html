@@ -1,0 +1,42 @@
+<ion-menu [content]="content">
+  <ion-content>
+    <div class="profile-thumb" (click)="presentActionSheet()">
+      <ion-icon name="ios-person-outline" *ngIf="!profileImage"></ion-icon>
+      <img class="profile-image" src="{{profileImage}}" *ngIf="profileImage"/>      
+      <ion-icon name="camera"></ion-icon>
+    </div>
+
+    <button menuClose small ion-button icon-left color="secondary" (click)="editProfile()">
+      <ion-icon name="create"></ion-icon> Edit Profile
+    </button>
+    
+    <ion-list>
+      <ion-item class="username">
+        <h2>{{data.firstName}} {{data.lastName}}</h2>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="mail" item-left></ion-icon>
+        <span>Email</span>
+        <p>{{data.email}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="phone-portrait" item-left></ion-icon>
+        <span>Contact No.</span>
+        <p>{{data.mobile}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="briefcase" item-left></ion-icon>
+        <span>Company Name</span>
+        <p>{{data.company}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="pin" item-left></ion-icon>
+        <span>Location</span>
+        <p>{{data.location}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

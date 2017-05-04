@@ -1,0 +1,24 @@
+user-profile {
+  .content {
+    background-color: $secondary;
+  }
+
+  .item {
+    background-color: transparent;
+    padding-left: 0;
+  }
+
+  .item-inner {
+    padding-right: 0 !important;
+  }
+
+  .input {
+    background-color: #fff;
+  }
+
+  .button {
+    font-size: 1.4rem;
+    @extend .fira-sans;
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle (click)="back()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+    <ion-title>Edit Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form #profileForm="ngForm" (ngSubmit)="submit(profileForm)" name="profileForm" novalidate="novalidate">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>First Name</ion-label>
+        <ion-input type="text" [(ngModel)]="person.firstName" name="firstName" required="required"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Last Name</ion-label>
+        <ion-input type="email"  [(ngModel)]="person.lastName" name="lastName" required="required"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Company Name</ion-label>
+        <ion-input type="text" [(ngModel)]="person.company" name="company" required="required"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Mobile Number</ion-label>
+        <ion-input type="number" [(ngModel)]="person.mobile" name="mobile" required="required"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="email" [(ngModel)]="person.email" name="email" required="required"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Location</ion-label>
+        <ion-input type="text" [(ngModel)]="person.location" name="location" required="required"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button large full type="submit">Update Profile</button>
+  </form>
+</ion-content>

@@ -1,0 +1,141 @@
+// http://ionicframework.com/docs/v2/theming/
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+$primary: #d2051e;
+$secondary: #f3f0eb;
+$theme: #b00419;
+
+$color-hover-percent: 5%;
+$color-active-percent: 7%;
+
+$gray-mine-shaft: #333;
+$gray-ship: #414042;
+$gray-dove: #666;
+$gray-dusty: #999;
+$gray-alto: #d9d9d9;
+$gray-concrete: #f2f2f2;
+$gray-concrete__hover: darken($gray-concrete, $color-hover-percent);
+$gray-concrete__active: darken($gray-concrete, $color-active-percent);
+
+.toolbar-background {
+  background-color: $primary;
+}
+
+.fira-sans {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.toolbar-title,
+.bar-button{
+  color: #fff;
+}
+
+.toolbar-title {
+  @extend .fira-sans;
+
+  font-weight: 300;
+}
+
+ion-menu {
+  .content {
+    background-color: $primary;
+  }
+
+  .profile-thumb {
+    display: block;
+    position: relative;
+    width: 120px;
+    margin: 25px auto 0;
+    text-align: center;
+  }
+
+  .ion-ios-person-outline,
+  .button,
+  .profile-image {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .ion-ios-person-outline,
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    background-color: $secondary;
+    border-radius: 120px;
+    font-size: 90px;
+    color: $primary;
+    text-align: center;
+    line-height: 120px;
+  }
+
+  ion-icon[name='camera'] {
+    width: 3rem;
+    height: 3rem;
+    line-height: 2.8rem;
+    color: #fff;
+    font-size: 1.6rem;
+    border-radius: 2rem;
+    background-color: $primary;
+    border: 1px solid $secondary;
+    color: $secondary;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    top: -20px;
+  }
+
+  .button {
+    color: $primary;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+  }
+
+  .item {
+    background-color: transparent;
+    border-bottom: 1px solid $theme;
+
+    &.username {
+      background-color: $theme;
+      color: $secondary;
+    }
+
+    ion-icon {}
+
+    ion-label {
+      font-size: 1.4rem;
+    }
+
+    .icon {
+      font-size: 2.2rem;
+      color: $secondary;
+    }
+
+    p, span {
+      color: $secondary;
+
+      @extend .fira-sans;
+    }
+
+    span {
+      display: block;
+      font-size: 1.1rem;
+      opacity: 0.7;
+    }
+
+    .item-inner {
+      border-bottom: none !important;
+    }
+  }
+}

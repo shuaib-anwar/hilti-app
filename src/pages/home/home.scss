@@ -1,0 +1,69 @@
+page-home {
+  .grid {
+    padding: 0;
+    height: 100%;
+  }
+
+  .row {
+    height: 100%;
+  }
+
+  .col {
+    padding: 1px;
+  }
+
+  .content-md {
+    background-color: $secondary;
+  }
+
+  .card {
+    background-color: #fff;
+    box-shadow: none;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+    height: 100%;
+  }
+
+  .card-content {
+    padding-left: 0;
+    padding-right: 0;
+    height: 100%;
+
+    .item {
+      text-align: center;
+      color: $primary;
+      height: 100%;
+
+      p {
+        color: $primary;
+
+        @extend .fira-sans;
+      }
+    }
+
+    .icon {
+      font-size: 3rem;
+      margin-bottom: 5px;
+    }
+  }
+
+  ion-icon[name='create'] {
+    color: $primary;
+  }
+
+  span {
+    display: block;
+    font-size: 1.2rem;
+    line-height: 2rem;
+
+    &.mobile {
+      color: $gray-dusty;
+    }
+  }
+}
+
+.coming-soon{
+  padding-top: 100px;
+  text-align: center;
+}
